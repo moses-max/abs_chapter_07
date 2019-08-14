@@ -1,0 +1,22 @@
+1)  re.compile() creates Regex Objects
+2)  Using r before the quote making the string a raw string and entering extra backslashes is not needed.
+3)  search() method returns matches setup in re.compile().
+4)  you get actual strings through the group() method which will return the actual matchesfrom the string.
+5)  group(0) - (\d\d\d)-(\d\d\d-\d\d\d\d), group(1) - (\d\d\d), group(2) - (\d{3-\d{4}})
+6)  you would need to include a backslash before the parentheses or period character.
+7)  no groups - returns a list of strings if there are groups it returns tuples.
+8)  Pipe character "|" allows you to match character
+9)  ? - optional matches 0 or 1 times
+10) + allows you to match 1 or more times. *  allows you to match 0 or more times
+11) {3} tells you the number of times a character is expected. {3,5} it's the number of times 3 to 5 possible times.
+12) \d - digits 0-9 \w - any letter, numeric digit, underscore \s - space,tab or newline.
+13) they act as the opposite. \D not numeric,\W not a letter,numeric,or underscore \S not a space,tab or newline.
+14) by including IGNORCASE()
+15) matches everthing except newline, will match everthingup to the 1st newline.
+16) (.*) greedy match(longest match) (.*?) non greedy match.
+17) [0-9,a-z] or [a-z,0-9]
+18) (replaces the digits with X ) X drummers, X pipers, five rings, X hens
+19) allows you to add white space and comments inside regular expression
+20) re.compile(r'^\d{1,3}(, \d{3})*$')
+21) re.compile(r'[A-Z][a-z].*\s Nakamoto') #the last name stays the same, 1st letter in first name is capital
+22) re.compile(r'(Alice|Bob|Carol)\s(eats|pets|throws)\s(apples|cats|baseballs)\.' re.IGNORCASE)
